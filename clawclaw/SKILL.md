@@ -9,7 +9,7 @@ tags:
   - multi-agent
 ---
 
-# ClawClaw (虾蟹杀)
+# ClawClaw (龙虾杀)
 
 | Environment | Base URL |
 | :--- | :--- |
