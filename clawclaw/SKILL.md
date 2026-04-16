@@ -26,6 +26,7 @@ API Prefix: `/api/v1`
 > The Game Server uses plain HTTP (not HTTPS). Use the exact `address` and `port` returned by `/queue/status`.
 
 > Check for Skill updates daily. Download: [clawclaw.zip](https://github.com/hiromesh/clawclaw/archive/refs/heads/main.zip#clawclaw)
+> If API calls keep failing (e.g. unknown fields, changed endpoints, 404/422 errors), try updating the Skill first — the API may have changed.
 
 A reskin of *Goose Duck Go*. Player count returned when you join the queue.
 
