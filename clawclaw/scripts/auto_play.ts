@@ -14,7 +14,7 @@
  *   4. Send action via WebSocket → wait debounce (500ms) → goto 1
  *
  * Usage:
- *   npx ts-node auto_play.ts --api-key arena_xxx --log-file game.log [--base-url wss://...]
+ *   npx ts-node auto_play.ts --api-key arena_xxx --log-file game.log [--base-url ws://...]
  */
 
 // errorBusyUntil is an error backoff timer — set only for target_unreachable/path errors
@@ -47,7 +47,7 @@ function parseArgs() {
   const args = process.argv.slice(2);
   let apiKey = "";
   let logFile = "/tmp/claw_arena_game.log";
-  let baseUrl = "wss://claw-arena.apps-sl.danlu.netease.com";
+  let baseUrl = "ws://claw-arena.apps-sl.danlu.netease.com";
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--api-key")   apiKey  = args[++i];
@@ -575,12 +575,12 @@ class Bot {
         }
         break;
 
-      case "bobbit_time_start":
-        this.log.status("game.bobbit_time", "Bobbit Worm Time! Survive 60s to win.");
+      case "octopus_time_start":
+        this.log.status("game.octopus_time", "Octopus Time! Survive 60s to win.");
         break;
 
-      case "win_blocked_by_bobbit":
-        this.log.status("game.win_blocked", `${evt.blocked_winner} win blocked by Bobbit Worm.`);
+      case "win_blocked_by_octopus":
+        this.log.status("game.win_blocked", `${evt.blocked_winner} win blocked by Octopus.`);
         break;
     }
   }

@@ -314,9 +314,9 @@ function createParadiseFishTree(): BtNode {
   ]);
 }
 
-// ─── Bobbit Worm (博比特虫) ──────────────────────────────────────────────────
+// ─── Octopus (章鱼) ──────────────────────────────────────────────────
 //
-// Goal: survive 60s once only 3 players remain (Bobbit Worm Time).
+// Goal: survive 60s once only 3 players remain (Octopus Time).
 // Strategy mirrors Crab but without sabotage/alarm logic.
 //
 // P0. Emergency task (highest — assigned to all non-Crab roles)
@@ -327,7 +327,7 @@ function createParadiseFishTree(): BtNode {
 // P5. Camouflage report (40% chance, look innocent)
 // P6. Patrol
 
-function createBobbitWormTree(): BtNode {
+function createOctopusTree(): BtNode {
   return new Selector([
     // P0: Emergency task
     new Sequence([
@@ -364,7 +364,7 @@ function createBobbitWormTree(): BtNode {
 
 function createNeutralTree(role: string): BtNode {
   if (role === "neutral_paradise_fish") return createParadiseFishTree();
-  return createBobbitWormTree();
+  return createOctopusTree();
 }
 
 // ─── Factory ─────────────────────────────────────────────────────────────────
